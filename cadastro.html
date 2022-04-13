@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<title> Cadastro </title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="Style_cadastro.css">
+		<link rel="stylesheet" href="MascaraMoeda.java">
+	</head>
+
+	<body>
+		<div class="container-principal">
+			<header>
+				<div class="logo">
+					<a href="Home.html">
+						<img src="logo.jpg" alt="logo site" height="100" width="100">
+					</a>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="Home.html">HOME</a></li>
+						<li><a href="Interpretes.php">INTERPRETES</a></li>
+						<li><a href="cadastro.html">SOU INTERPRETE</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+
+		<section>
+			<div class="plataforma">
+				<div>
+					<h1>
+						Por que atender através da Talk4Me?
+					</h1>
+				</div>
+				<div class="imagens">
+					<div class="itens">
+						<img src="usuario-branco-remove.png" alt="" height="100" width="120">
+					</div>
+					<div class="itens">
+						<img src="whatsapp.png" alt=""width="90" height="90">
+					</div>
+					<div class="itens"> 
+						<img src="calendario.png" alt="" height="130" width="130">
+					</div>
+				</div>
+				<div class="imagens">
+					<div class="itens">
+						<p>Encontre um interprete </p>
+					</div>
+					<div class="itens">
+						<p>Click no botão do whatsapp no perfil</p>
+					</div>
+					<div class="itens">
+						<p>Combinem juntos horários e datas</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<div class="fundo">
+			<div class="container">
+				<h2> Preencha seus dados abaixo </h2>
+				<form action="cadastrar.php" method="POST" class="campos_cadastro">
+					<div class="alinhamento">
+						<div class="input-field espaçamento">
+							<label for="Nome"> Nome completo </label>
+							<input type="text" name="nome" placeholder="Digite seu nome" required>
+						</div>
+
+						<div class="input-field">
+							<label for="e-mail"> E-mail </label>
+							<input type="email" name="email" placeholder="Digite seu e-mail"required>						
+						</div>
+					</div>
+
+					<div class="alinhamento">
+						<div class="input-field espaçamento">
+							<label for="Celular"> Celular </label>
+							<input type="text" name="celular" placeholder="Digite seu celular"required>						
+						</div>
+
+						<div class="input-field">
+							<label for="Cidade"> Cidade </label>
+							<input type="text" name="cidade" placeholder="Digite sua cidade"required>						
+						</div>
+					</div>
+
+					<div class="alinhamento">
+						<div class="input-field espaçamento">
+							<label for="dinheiro"> Valor </label>
+							<input type="number" min="0" max="400" placeholder="Digite o valor hora do serviço">						
+						</div>
+
+						<div class="input-field">
+							<label for="foto"> Foto de perfil: </label>
+							<input type="file" name="foto" required>						
+						</div>
+					</div>
+
+					<div class="descrição">
+						<label> Descreva seu trabalho em poucas palavras </label>
+						<textarea style="width: 100%"></textarea>
+					</div>
+
+
+					<div class="termo">
+						<input type="checkbox" name="agreement" id="agreement">
+						<label for="agreement" id="agreement-label"> Li os <a href="#">termos de uso</a> e a <a href="#">politica de privacidade</a> e estou de acordo.</label>
+					</div>
+
+
+					<div class="botao_login">
+						<input class="bt_login" type="submit" value="Confirmar">
+					</div>
+				</form>
+			</div>
+		</div>					
+	</body>
+</html>
