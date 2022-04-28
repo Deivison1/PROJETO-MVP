@@ -51,6 +51,7 @@ nav ul li a {
     flex-direction: row;
     text-decoration: none; 
     color: #fff;
+    
 }
 
 nav ul li a:hover {
