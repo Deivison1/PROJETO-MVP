@@ -2,8 +2,9 @@
 session_start();
 include_once ("conexao1.php");
 
-$result_usuario="SELECT nome, cidade, email,celular,descricao FROM `interpretes`";
+$result_usuario="SELECT nome, cidade, email,celular,descricao, arquivo, valor FROM `interpretes`";
 $result_usuario=mysqli_query($conexao, $result_usuario);
+$dir="uploads/";
 
 
 ?>
@@ -20,13 +21,13 @@ $result_usuario=mysqli_query($conexao, $result_usuario);
 		<div class="container-principal">
 			<header>
 				<div class="logo">
-					<a href="index.html">
+					<a href="Home.html">
 						<img src="logo.jpg" alt="logo site" height="100" width="100">
 					</a>
 				</div>
 				<nav>
 					<ul>
-						<li><a href="index.html">HOME</a></li>
+						<li><a href="Home.html">HOME</a></li>
 						<li><a href="Interpretes.php">INTERPRETES</a></li>
 						<li><a href="cadastro.html">SOU INTERPRETE</a></li>
 					</ul>
@@ -35,12 +36,11 @@ $result_usuario=mysqli_query($conexao, $result_usuario);
 		</div>
 
 		<?php while($dado = $result_usuario->fetch_array()){ ?>
-		<article class="interpretes">
-			
+			<article class="interpretes">				
 				<div>
 					<div class="Foto_Valor">
 						<div>
-							<img class="foto" src="usuario.jpg" height="130" width="130">
+							<img class="foto" src="<?php echo $dir.$dado['arquivo'] ?>" height="130" width="130">
 						</div>
 
 						<div class="profissional">
@@ -50,7 +50,7 @@ $result_usuario=mysqli_query($conexao, $result_usuario);
 								<p class="cidade"><?php echo $dado['cidade'] ?> </p>
 							</article>
 							<div class="valor">
-								<p> Valor a combinar </p>
+								<p>Valor: R$<?php echo $dado['valor'] ?></p>
 							</div>					
 						</div>	
 					</div>
@@ -66,6 +66,7 @@ $result_usuario=mysqli_query($conexao, $result_usuario);
 							<p class="texto"> <?php echo $dado['descricao'] ?> </p>
 						</div>	
 					</div>
+					
 					<div class="contato">
 						<form action="https://wa.me/<?php echo $dado['celular'] ?>" type="submit"> 
 							<button >
@@ -77,9 +78,8 @@ $result_usuario=mysqli_query($conexao, $result_usuario);
 							</button>
 						</form>
 					</div>									
-				</div>
-				
-		</article>
+				</div>					
+			</article>
 		<?php } ?>
 	</body>
 </html>
