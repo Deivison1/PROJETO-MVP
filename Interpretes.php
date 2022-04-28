@@ -20,13 +20,13 @@ $result_usuario=mysqli_query($conexao, $result_usuario);
 		<div class="container-principal">
 			<header>
 				<div class="logo">
-					<a href="Home.html">
+					<a href="index.html">
 						<img src="logo.jpg" alt="logo site" height="100" width="100">
 					</a>
 				</div>
 				<nav>
 					<ul>
-						<li><a href="Home.html">HOME</a></li>
+						<li><a href="index.html">HOME</a></li>
 						<li><a href="Interpretes.php">INTERPRETES</a></li>
 						<li><a href="cadastro.html">SOU INTERPRETE</a></li>
 					</ul>
